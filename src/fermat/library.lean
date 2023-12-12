@@ -25,3 +25,9 @@ def power : ℕ → ℕ → ℕ
 --   | 0 _ := 0
 --   | _ 0 := 0
 --   | x y := if (x < y) then x else modulo (x - y) y
+
+lemma itetrue (p : Prop) [decidable p] : p → ∀ T : Type, ∀ x y : T, (if p then x else y) = x
+:= begin
+  intros h T x y,
+  simp [h],
+end
