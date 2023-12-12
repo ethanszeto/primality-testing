@@ -25,7 +25,7 @@ def fermat_witness (a n : ℕ) : bool :=
 #eval fermat_witness 8 1007
 #eval fermat_witness 9 1007
 
-theorem fermat_test_true : ∀ (a p: ℕ), nat.prime p → fermat_witness a p = tt
+theorem fermat_test_true : ∀ (a p: ℕ), nat.prime p → fermat_witness a p = ff
 := begin
   intros a p h,
   sorry,
